@@ -1,0 +1,1142 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"lid.dat"'
+$!VarSet |LFDSVL1| = '"X" "Y" "u_final" "v_final" "p_final"'
+$!SetStyleBase Factory
+$!CreateColorMap 
+  Name = 'Sequential - Viridis'
+  NumControlPoints = 11
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    TrailRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.08163
+    LeadRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    TrailRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 0.1837
+    LeadRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    }
+  ControlPoint 4
+    {
+    ColorMapFraction = 0.2857
+    LeadRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    }
+  ControlPoint 5
+    {
+    ColorMapFraction = 0.3878
+    LeadRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    TrailRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    }
+  ControlPoint 6
+    {
+    ColorMapFraction = 0.4898
+    LeadRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    }
+  ControlPoint 7
+    {
+    ColorMapFraction = 0.5918
+    LeadRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    }
+  ControlPoint 8
+    {
+    ColorMapFraction = 0.6939
+    LeadRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    TrailRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    }
+  ControlPoint 9
+    {
+    ColorMapFraction = 0.7959
+    LeadRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    TrailRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    }
+  ControlPoint 10
+    {
+    ColorMapFraction = 0.898
+    LeadRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    TrailRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    }
+  ControlPoint 11
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    TrailRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = 'Untitled'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = Cartesian2D
+  IncludeText = No
+  IncludeGeom = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = Cartesian2D
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!ActiveFieldMaps  =  [1]
+$!GlobalRGB 
+  RedChannelVar = 3
+  GreenChannelVar = 3
+  BlueChannelVar = 3
+  RangeMin = 0
+  RangeMax = 1
+$!GlobalContour  1
+  Var = 5
+  DefNumLevels = 25
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 99.567
+      Y = 87.115
+      }
+    }
+  ColorCutoff
+    {
+    RangeMin = -72.4195
+    RangeMax = 73.0455
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = -145.152
+      CMax = 145.778
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 1
+  RawData
+21
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+-7.51149240735
+-5.25335010676
+-3.59735499937
+-3.56493041391
+0
+0.819603374041
+3.61636346905
+20
+40
+60
+80
+100
+120
+140
+$!GlobalContour  2
+  Var = 4
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 2
+  RawData
+15
+-0.35
+-0.3
+-0.25
+-0.2
+-0.15
+-0.1
+-0.05
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+$!GlobalContour  3
+  Var = 5
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 3
+  RawData
+15
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+20
+40
+60
+80
+100
+120
+140
+$!GlobalContour  4
+  Var = 3
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 4
+  RawData
+11
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+$!GlobalContour  5
+  Var = 3
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 5
+  RawData
+11
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+$!GlobalContour  6
+  Var = 3
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 6
+  RawData
+11
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+$!GlobalContour  7
+  Var = 3
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 7
+  RawData
+11
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+$!GlobalContour  8
+  Var = 3
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 8
+  RawData
+11
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+$!GlobalTwoDVector 
+  UVar = 3
+  VVar = 4
+  RelativeLength = 0.055
+$!GlobalScatter 
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+  RefScatSymbol
+    {
+    Color = Red
+    FillColor = Red
+    }
+$!FieldMap  [1]
+  Mesh
+    {
+    Color = Black
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Black
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Black
+    }
+  Scatter
+    {
+    Color = Black
+    }
+  Shade
+    {
+    Color = Custom2
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Black
+    LineThickness = 0.1
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = KPlanes
+    IRange
+      {
+      Max = 1
+      }
+    }
+  VolumeMode
+    {
+    VolumeObjectsToPlot
+      {
+      ShowIsosurfaces = No
+      ShowSlices = No
+      ShowStreamtraces = No
+      }
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!TwoDAxis 
+  XDetail
+    {
+    VarNum = 1
+    }
+  YDetail
+    {
+    VarNum = 2
+    }
+$!View Fit
+$!TwoDAxis 
+  DepXToYRatio = 1
+$!TwoDAxis 
+  XDetail
+    {
+    RangeMin = 0
+    RangeMax = 1.0958887987012988496
+    GRSpacing = 0.2
+    }
+$!TwoDAxis 
+  YDetail
+    {
+    RangeMin = 0
+    RangeMax = 1.000100000000000211
+    GRSpacing = 0.2
+    }
+$!IsoSurfaceAttributes  1
+  IsoSurfaceSelection = OneSpecificValue
+  Isovalue1 = -72.4195
+  Isovalue2 = 0.313
+  Isovalue3 = 73.0455
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  2
+  DefinitionContourGroup = 2
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 2
+    FloodColoring = Group2
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  3
+  DefinitionContourGroup = 3
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 3
+    FloodColoring = Group3
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  4
+  DefinitionContourGroup = 4
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 4
+    FloodColoring = Group4
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  5
+  DefinitionContourGroup = 5
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 5
+    FloodColoring = Group5
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  6
+  DefinitionContourGroup = 6
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 6
+    FloodColoring = Group6
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  7
+  DefinitionContourGroup = 7
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 7
+    FloodColoring = Group7
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  8
+  DefinitionContourGroup = 8
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 8
+    FloodColoring = Group8
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!SliceAttributes  1
+  PrimaryPosition
+    {
+    X = 0
+    Y = 0
+    Z = 0
+    I = 1
+    J = 1
+    K = 1
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Include = No
+    Origin
+      {
+      X = 0
+      Y = 0
+      Z = 0
+      }
+    BoxDimension
+      {
+      X = 0
+      Y = 0
+      Z = 0
+      }
+    }
+$!SliceAttributes  2
+  SliceSurface = YPlanes
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  3
+  SliceSurface = ZPlanes
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  4
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  5
+  SliceSurface = YPlanes
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  6
+  SliceSurface = ZPlanes
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  7
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!SliceAttributes  8
+  SliceSurface = YPlanes
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.3558245527693649
+    Y = 0.6631226169087832
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.4430977933627636
+    Y = 0.7349946973974645
+    }
+  AltStartPos
+    {
+    X = 0.3558245527693649
+    Y = 0.6631226169087832
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.2890861923155894
+    Y = 0.6477214568040658
+    }
+  AltStartPos
+    {
+    X = 0.4430977933627636
+    Y = 0.7349946973974645
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.2531501520712488
+    Y = 0.6066516965248193
+    }
+  AltStartPos
+    {
+    X = 0.2890861923155894
+    Y = 0.6477214568040658
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.2326152719316256
+    Y = 0.5553144961757612
+    }
+  AltStartPos
+    {
+    X = 0.2531501520712488
+    Y = 0.6066516965248193
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.2351821319490785
+    Y = 0.4090034751809458
+    }
+  AltStartPos
+    {
+    X = 0.2326152719316256
+    Y = 0.5553144961757612
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.1889786516349262
+    Y = 0.2832273343257535
+    }
+  AltStartPos
+    {
+    X = 0.2351821319490785
+    Y = 0.4090034751809458
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.1710106315127559
+    Y = 0.2216226939068838
+    }
+  AltStartPos
+    {
+    X = 0.1889786516349262
+    Y = 0.2832273343257535
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.09913855102407468
+    Y = 0.1189482932087678
+    }
+  AltStartPos
+    {
+    X = 0.1710106315127559
+    Y = 0.2216226939068838
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.1479088913556798
+    Y = 0.1574511934705612
+    }
+  AltStartPos
+    {
+    X = 0.09913855102407468
+    Y = 0.1189482932087678
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.05550193072737533
+    Y = 0.06247737282480381
+    }
+  AltStartPos
+    {
+    X = 0.1479088913556798
+    Y = 0.1574511934705612
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.9102663165391919
+    Y = 0.07531167291206842
+    }
+  AltStartPos
+    {
+    X = 0.05550193072737533
+    Y = 0.06247737282480381
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.9513360768184383
+    Y = 0.04194249268518058
+    }
+  AltStartPos
+    {
+    X = 0.9102663165391919
+    Y = 0.07531167291206842
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.02983333055284629
+    Y = 0.02140761254555734
+    }
+  AltStartPos
+    {
+    X = 0.9513360768184383
+    Y = 0.04194249268518058
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.353257692751912
+    Y = 0.747828997484729
+    }
+  AltStartPos
+    {
+    X = 0.02983333055284629
+    Y = 0.02140761254555734
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.5791413742877675
+    Y = 0.2421575740465071
+    }
+  AltStartPos
+    {
+    X = 0.353257692751912
+    Y = 0.747828997484729
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.5740076542528616
+    Y = 0.1959540937323548
+    }
+  AltStartPos
+    {
+    X = 0.5791413742877675
+    Y = 0.2421575740465071
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.5483390540783326
+    Y = 0.324297094605
+    }
+  AltStartPos
+    {
+    X = 0.5740076542528616
+    Y = 0.1959540937323548
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.7690890155792822
+    Y = 0.6836574970484064
+    }
+  AltStartPos
+    {
+    X = 0.5483390540783326
+    Y = 0.324297094605
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.5483390540783326
+    Y = 0.5938173964375548
+    }
+  AltStartPos
+    {
+    X = 0.7690890155792822
+    Y = 0.6836574970484064
+    }
+$!Streamtrace Add
+  StreamType = TwoDLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.5072692937990861
+    Y = 0.5296458960012322
+    }
+  AltStartPos
+    {
+    X = 0.5483390540783326
+    Y = 0.5938173964375548
+    }
+$!StreamAttributes 
+  StreamTiming
+    {
+    MarkSize = 1
+    TimeDelta = 0.102512213051
+    MarkSymbol
+      {
+      GeomShape = Sphere
+      }
+    }
+  RodRibbon
+    {
+    Effects
+      {
+      LightingEffect = Gouraud
+      }
+    }
+  MaxSteps = 10000
+$!FieldLayers 
+  ShowMesh = No
+  ShowContour = Yes
+  ShowEdge = No
+$!StreamtraceLayers 
+  Show = No
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config
